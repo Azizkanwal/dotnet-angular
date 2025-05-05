@@ -1,23 +1,32 @@
-<p>purchase-history works!</p>
+<section>
+    <div class="container">
+        <div class="row">
+            <p>purchase-history works!</p>
 
-<div class="purchase-history">        
-  <h2>Purchase History</h2>
- <button (click)="refresh()">Refresh</button>
+            <div class="purchase-history">
+                <h2>Purchase History</h2>
+                <div class="d-flex justify-content-end align-items-center">
+                    <button class="btn" (click)="refresh()"> <img src="assets/refresh-icon.svg" alt="" /> Refresh</button>
 
- <table class="table table-striped table-bordered">
-    <thead class="table-light">
-      <tr>
-        <th>#</th>
-        <th>Item</th>
-        <th>Amount</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let purchase of purchases; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td>{{ purchase.item }}</td>
-        <td>${{ purchase.amount }}</td>
-      </tr>
-    </tbody>
-  </table>
-  
+                </div>
+
+                <table class="table table-striped table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>#</th>
+                            <th>Item</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let purchase of purchases; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ purchase.item }}</td>
+                            <td>${{ purchase.amount }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
