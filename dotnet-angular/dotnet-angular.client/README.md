@@ -1,27 +1,69 @@
-# DotnetAngularClient
+Project Name: DotNet-Angular Customer Portal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Introduction
+DotNet-Angular Customer Portal is a full-stack web application built using ASP.NET Core (Web API) and Angular for managing customer data, 
+purchase history, and testimonials. It demonstrates clean architecture principles and efficient client-server communication, ideal for enterprise-grade customer management systems.
 
-## Development server
+Overview
+This application follows a layered architecture to ensure clean separation of concerns:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Backend (ASP.NET Core):
 
-## Code scaffolding
+Exposes RESTful APIs.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Handles customer data, testimonials, payment methods, and purchase history.
 
-## Build
+Uses Entity Framework Core for database access.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Frontend (Angular):
 
-## Running unit tests
+Consumes the APIs to display customer details and purchase records.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Supports routing (e.g., navigating to /details/:id) to show detailed views.
 
-## Running end-to-end tests
+Includes reusable components for customer list, detail view, and purchase history.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Key Features:
 
-## Further help
+Fetch and display customers with associated payment methods and testimonials.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+View and refresh purchase history.
+
+Navigate between components using Angular Router.
+
+⚙️ Prerequisites
+To run this project locally, make sure you have the following:
+
+🖥️ Development Tools
+Visual Studio 2022 (recommended: Professional or Enterprise edition)
+
+Node.js (v18+): Download Node.js
+
+Angular CLI: Install via npm install -g @angular/cli
+
+SQL Server + SQL Server Management Studio (SSMS)
+
+📦 Database Setup
+Open SQL Server Management Studio.
+
+Create a new database named CustomerPortalDb.
+
+Set the connection string in appsettings.json.
+
+🏁 Backend Setup
+Open the solution in Visual Studio.
+
+Run the following in Package Manager Console:
+
+Add-Migration Initial
+Update-Database
+Press F5 to run the API.
+
+🌐 Frontend Setup
+Open a terminal in the Angular client directory.
+
+Run:
+
+npm install
+ng serve
+Navigate to http://localhost:4200/ in your browser.
